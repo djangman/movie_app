@@ -1,0 +1,27 @@
+<div class="movie-container row justify-content">
+
+	<div class="col-1" >
+		<button class="btn btn-danger" (click)="onDeleteMovie(index)">Remove</button>
+	</div>
+	<div class="col-4">
+		<input class="form-control" type="text" value="{{ movie.name }}">
+	</div>
+	<div class="col-4">
+			<select class="form-control" >
+				<option 
+					*ngFor="let cat of categories" 
+					value="{{ cat }}"
+					[selected]="movie.category == cat"
+					>
+					{{cat}}
+					
+				</option>
+			</select>
+	</div>
+	<div class="col-3">
+		<div class="star-div">
+			<star-rating [starType]="'svg'" [rating]="5.00"></star-rating>
+		</div>
+	</div>
+
+</div>

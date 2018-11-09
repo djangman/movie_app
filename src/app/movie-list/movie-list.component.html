@@ -1,0 +1,19 @@
+<div class="container">
+	<div id="list-header" class="row">
+		<div class="col-10 offset-1">
+			<div class="float-left">
+				<h5>My favorite movies</h5>
+			</div> 
+			<div class="float-right">
+				<h5>Rating</h5>
+			</div>
+		</div>
+	</div>
+</div>
+
+<app-movie 
+	*ngFor="let movieElem of movies; let i = index"
+	[movie]="movieElem"
+	[index]="i"
+>
+</app-movie>
